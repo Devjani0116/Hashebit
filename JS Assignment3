@@ -95,7 +95,6 @@ console.log(repeatedSum(456)); // Output: 6
 function countWords(paragraph) {
     return paragraph.split(/\s+/).length;
 }
-
 console.log(countWords('Lorem ipsum dolor sit amet, consectetur adipiscing elit')); // Output: 8
 
 10.Write a function to reverse a string.
@@ -159,6 +158,5 @@ const output = students.map(student => {
     const average = sum / Object.keys(scores).length;
     return { average: average };
 });
-
 console.log(output);
 
