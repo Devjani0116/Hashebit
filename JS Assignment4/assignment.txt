@@ -1,1 +1,82 @@
+1)Dark Theme
+=>
+function swapTheme() {
+    var appDiv = document.getElementById('app');
+    var swapBtn = document.getElementById('swap');
 
+    if (appDiv.classList.contains('day')) {
+       
+        appDiv.classList.remove('day');
+        appDiv.classList.add('night');
+        swapBtn.classList.remove('button_day');
+        swapBtn.classList.add('button_night');
+    } else {
+        
+        appDiv.classList.remove('night');
+        appDiv.classList.add('day');
+        swapBtn.classList.remove('button_night');
+        swapBtn.classList.add('button_day');
+    }
+}
+
+2)Div Creation
+=>
+function createDiv(width, height, text) {  
+    var div = document.createElement("div");    
+    div.style.width = width + "px";
+    div.style.height = height + "px";
+    div.style.color="red"
+    div.style.backgroundColor="blue"
+    div.textContent = text; 
+    document.getElementById("container").appendChild(div);
+}
+createDiv(200, 100, "Hello, World!");
+Window.createDiv = createDiv;
+
+3)Hide Show Para
+=>
+function toggleVisibility() {
+    var paragraph = document.getElementById('useless-paragraph');
+    if (paragraph.style.display === 'none' || paragraph.style.display === '') {
+        paragraph.style.display = 'block';
+    } else {
+        paragraph.style.display = 'none';
+    }
+}
+
+4)Dynamic CSS
+=>
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('colorchange').addEventListener('click', function () {
+        var color = document.getElementById('colorbox').value;
+        document.getElementById('text-container').style.color = color;
+    });
+   document.getElementById('fontsize').addEventListener('input', function () {
+        var fontSize = this.value;
+        document.getElementById('text-container').style.fontSize = fontSize + 'px';
+    });
+
+    var styleButtons = document.querySelectorAll('.stylebt');
+    styleButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            var style = this.id;
+            document.getElementById('text-container').style[style] = this.classList.toggle('active') ? style : 'initial';
+        });
+    });
+    document.getElementById('list').addEventListener('change', function () {
+        var fontFamily = this.value;
+        document.getElementById('text-container').style.fontFamily = fontFamily;
+    });
+    document.getElementById('getstyle').addEventListener('click', function () {
+        var cssProps = '';
+        var textStyles = document.getElementById('text-container').style;
+        for (var i = 0; i < textStyles.length; i++) {
+            var prop = textStyles[i];
+            var value = textStyles.getPropertyValue(prop);
+            if (value) {
+                cssProps += prop + ': ' + value + '; ';
+            }
+        }
+        document.getElementById('css-props').textContent = cssProps;
+    });
+});
