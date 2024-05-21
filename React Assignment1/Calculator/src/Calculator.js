@@ -62,25 +62,4 @@ const Calculator = () => {
   );
 };
 
-export default Calculator;
-Step 3: Use the Calculator Component in Your App
-Modify the App Component:
-Open src/App.js and replace its contents with the following code to include the Calculator component:
-jsx
-Copy code
-import React from 'react';
-import Calculator from './Calculator';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>React Calculator</h1>
-        <Calculator />
-      </header>
-    </div>
-  );
-}
-
-export default App;
