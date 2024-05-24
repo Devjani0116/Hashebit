@@ -1,0 +1,100 @@
+/* SurveyForm.css */
+
+.survey-form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f4ebef;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+ 
+  
+  .survey-form-container:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  h3 {
+    margin: 5px 7px;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 1.8em;
+    color: #333;
+    text-decoration: none;
+    
+   
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4899ee;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .thank-you-message {
+    text-align: center;
+    font-size: 1.5rem;
+    color: green;
+  }
+  
+  @media (max-width: 600px) {
+    .survey-form-container {
+      padding: 20px;
+    }
+  
+    .form-group label {
+      font-size: 0.9rem;
+    }
+  
+    button {
+      padding: 10px;
+      font-size: 1rem;
+    }
+  }
