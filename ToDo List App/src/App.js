@@ -8,7 +8,7 @@ const App = () => {
   const initialTodos = JSON.parse(localStorage.getItem('todos')) || [];
   const [todos, setTodos] = useState(initialTodos);
   const [inputValue, setInputValue] = useState('');
-  const [nextId, setNextId] = useState(initialTodos.length ? Math.max(...initialTodos.map(todo => todo.id)) + 1 : 0); // Initialize nextId with the maximum ID + 1
+  const [nextId, setNextId] = useState(initialTodos.length ? Math.max(...initialTodos.map(todo => todo.id)) + 1 : 0);
 
   const saveTodosToLocalStorage = (todos) => {
     localStorage.setItem('todos', JSON.stringify(todos));
