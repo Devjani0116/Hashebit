@@ -1,0 +1,104 @@
+/* src/App.css */
+body {
+  background-color: white; /* Set background color of the whole page to white */
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  max-width: 600px;
+  margin: 50px auto;
+
+  padding: 40px;
+  border-radius: 10px;
+  background: hsl(320, 31%, 85%);
+  color: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  
+}
+
+.todoForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  
+}
+
+.input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 70%;
+  margin-right: 10px;
+  font-style:Serif;
+  font-size: 15px;
+}
+
+.addButton {
+  padding: 10px 20px;
+  background: #e9ec44;
+  color: rgb(23, 23, 23);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.addButton:hover {
+  background: #45a049;
+}
+
+.todoItems {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+
+}
+
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  background: white;
+  border: 1px solid #555;
+  border-radius: 5px;
+}
+
+.taskText {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.taskText.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.editInput {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.saveButton,
+.editButton,
+.removeButton {
+  background: #2f1778;
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-right: 10px;
+  font-size: 20px; 
+}
+
+.saveButton:hover,
+.editButton:hover,
+.removeButton:hover {
+  background: #45a049;
+}
